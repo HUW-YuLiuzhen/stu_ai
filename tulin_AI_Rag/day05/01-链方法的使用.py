@@ -38,9 +38,9 @@ template = PromptTemplate(
 )
 
 # 创建LLM
-llm = ChatOpenAI(api_key=os.getenv("DASHSCOPE_API_KEY"),
-                 base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
-                 model='qwen-plus',
+llm = ChatOpenAI(api_key=os.getenv("bail_api_key"),
+                 base_url=os.getenv("bail_base_url"),
+                 model='qwen3.6-plus',
                  temperature=0)
 
 
